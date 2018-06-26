@@ -1,7 +1,6 @@
-# README
+# TestOutRails5 application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a toy project create by Yang Song to test out the features provided by Rails 5
 
 Things you may want to cover:
 
