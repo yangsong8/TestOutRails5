@@ -28,3 +28,6 @@
 # Ignore secrets
 /config/secrets.yml
 /config/credentials.yml
+
+# Ignore IDE items
+.idea/*
