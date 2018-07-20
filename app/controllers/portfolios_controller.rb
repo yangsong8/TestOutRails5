@@ -42,6 +42,19 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.find(params[:id])
   end
 
+  def destroy
+    # duplicated code, should be DRYed later
+    @portfolio_items = Portfolio.find(params[:id])
+
+    # Destroy the record
+    @portfolio_items.destroy
+
+    #Redirect
+    respond_to do |format|
+      format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully removed.' }
+    end
+  end
+
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def portfolio_params
