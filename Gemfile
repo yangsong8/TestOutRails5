@@ -53,3 +53,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Creates pretty URLs and work with human-friendly strings as if theey were numeric ids.
+gem 'friendly_id', '~> 5.1.0'
