@@ -16,7 +16,7 @@ class PortfoliosController < ApplicationController
 
   def create
     # white list the technologies passed from new page
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+    @portfolio_item = Portfolio.new(portfolio_params)
 
     respond_to do |format|
       if @portfolio_item.save
@@ -67,6 +67,10 @@ class PortfoliosController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image)
+    params.require(:portfolio).permit(:title,
+                                      :subtitle,
+                                      :body,
+                                      technologies_attributes: [:name]
+    )
   end
 end
