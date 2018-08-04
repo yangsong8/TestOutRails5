@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
   layout 'portfolio'
 
   def index
@@ -31,13 +32,10 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
+
   end
 
   def update
-    # duplicated code, should be DRYed later
-    @portfolio_items = Portfolio.find(params[:id])
-
     respond_to do |format|
       if @portfolio_items.update(portfolio_params)
         # instead of sending users to the show page, bring them to the full list of portfolio items
@@ -49,14 +47,10 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    # duplicated code, should be DRYed later
-    @portfolio_item = Portfolio.find(params[:id])
+
   end
 
   def destroy
-    # duplicated code, should be DRYed later
-    @portfolio_items = Portfolio.find(params[:id])
-
     # Destroy the record
     @portfolio_items.destroy
 
