@@ -63,3 +63,6 @@ gem 'devise', '~> 4.2'
 
 # Bootstrap styles and javascripts
 gem 'bootstrap', '~> 4.1.3'
+
+# Authorization
+gem 'petergate', '~> 1.7'
