@@ -61,6 +61,9 @@ gem 'friendly_id', '~> 5.1.0'
 # For user model and log in/out feature
 gem 'devise', '~> 4.2'
 
+#Bootstrap JavaScript depends on jQuery. If you're using Rails 5.1+, add the jquery-rails gem to your Gemfile:
+gem 'jquery-rails'
+
 # Bootstrap styles and javascripts
 gem 'bootstrap', '~> 4.1.3'
 
