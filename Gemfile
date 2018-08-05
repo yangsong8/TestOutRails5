@@ -58,5 +58,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Creates pretty URLs and work with human-friendly strings as if theey were numeric ids.
 gem 'friendly_id', '~> 5.1.0'
 
-
+# For user model and log in/out feature
 gem 'devise', '~> 4.2'
+
+# Bootstrap styles and javascripts
+gem 'bootstrap', '~> 4.1.3'
