@@ -13,16 +13,26 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
 
-    <%= render "shared/nav",color: 'yellow' %>
+      <div class="site-wrapper-inner">
 
-    <%= login_helper %>
+        <div class="cover-container">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+          <%= render "shared/nav",color: 'yellow' %>
 
-    <%= source_helper("application") %>
+          <%= login_helper %>
+
+          <%= yield %>
+
+          <%= source_helper("application") %>
+        </div>
+
+      </div>
+
+    </div>
 
   </body>
-</html>
+</html>s
