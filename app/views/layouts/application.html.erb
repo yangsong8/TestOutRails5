@@ -21,11 +21,13 @@
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
 
-          <%= render "shared/nav",color: 'yellow' %>
+          <%= render "shared/application_nav" %>
 
           <%= login_helper %>
 
           <%= yield %>
+
+          <%= render "shared/application_footer" %>
 
           <%= source_helper("application") %>
         </div>
